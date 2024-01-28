@@ -24,9 +24,11 @@ class BTNode :
         
 def preorder (n) :
     if n is not None :
+        print("{", end = " ")
         print(n.data, end = " ")
         preorder(n.left)
         preorder(n.right)
+        print("}", end = " ")
         
 def inorder (n) :
     if n is not None :
