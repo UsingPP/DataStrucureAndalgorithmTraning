@@ -167,7 +167,7 @@ def change_optima_naiveMethod_recursion_start(coinNameList, returnMoney) :
     endIndex = len(coinNameList)
     coinCountList = [0] * endIndex
     optimal = [0] * endIndex
-    change_optima_naiveMethod_recursion(coinNameList, coinCountList, optimal, returnMoney, returnMoney, -1, endIndex-1)
+    change_optima_naiveMethod_recursion(coinNameList, coinCountList, optimal, returnMoney, returnMoney, 0, endIndex-1)
     return optimal
 
 def change_optima_naiveMethod_recursion(coinNameList, coinCountList, optimalReturnCoinCountList, returnMoney, originReturnMoney, coinIndex, endindex) :
@@ -192,14 +192,9 @@ def change_optima_naiveMethod_recursion(coinNameList, coinCountList, optimalRetu
                 #print("최적해는 : ", optimalReturnCoinCountList)      
                 #return optimal
         
-
-        
-        
-        
     else :
 
         n = returnMoney//coinNameList[coinIndex]
-        result = []
 
         for i in range(0, n+1) :
             newCoinCountList = coinCountList
